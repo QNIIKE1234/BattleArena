@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using BattleArena.Core;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace BattleArena.Login
 {
@@ -12,8 +13,9 @@ namespace BattleArena.Login
 
         public GameObject LoginPanel;
         public GameObject RegisterPanel;
-        public GameObject LoadingPanel;
+        public GameObject MainMenuPanel;
         public TextMeshProUGUI ErrorText;
+        public Button PressStartBtn;
 
         void Awake()
         {
@@ -32,9 +34,17 @@ namespace BattleArena.Login
             UGSAuthManager.OnAuthFailed -= HandleFailed;
         }
 
-        void HandleSuccess()
+        public void PressToStart()
         {
             SceneManager.LoadScene("Lobby");
+        }
+
+        void HandleSuccess()
+        {
+            RegisterPanel.SetActive(false);
+            LoginPanel.SetActive(false);
+            MainMenuPanel.SetActive(false);
+            PressStartBtn.gameObject.SetActive(true);
         }
 
         void HandleFailed(string msg)
