@@ -1,36 +1,36 @@
-using Unity.Services.Authentication;
+﻿using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using TMPro;
+using System;
 
 namespace BattleArena.Core
 {
     public class UGSAuthManager : MonoBehaviour
     {
-        
+        public static UGSAuthManager Instance;
+
+        public static event Action OnAuthSuccess;
+        public static event Action<string> OnAuthFailed;
+
         private bool isInitialized = false;
 
         public TMP_InputField LoginUsernameInput;
-
         public TMP_InputField LoginPasswordInput;
-
         public TMP_InputField RegisterUsernameInput;
-
         public TMP_InputField RegisterPasswordInput;
+
+        void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(gameObject);
+        }
 
         async void Start()
         {
             await InitUGS();
-
-            if (AuthenticationService.Instance.IsSignedIn)
-            {
-                Debug.Log("Already Logged In");
-                await CloudSaveManager.Instance.LoadPlayerData();
-            }
-            else
-            {
-                //Login("test001", "Test@1234");
-            }
         }
 
         async System.Threading.Tasks.Task InitUGS()
@@ -39,33 +39,39 @@ namespace BattleArena.Core
 
             await UnityServices.InitializeAsync();
             isInitialized = true;
-
-            Debug.Log("UGS Initialized");
         }
 
         public void OnClickLogin()
         {
+            if (!ValidateInput(LoginUsernameInput, LoginPasswordInput))
+                return;
+
             Login(LoginUsernameInput.text, LoginPasswordInput.text);
         }
 
         public void OnClickRegister()
         {
+            if (!ValidateInput(RegisterUsernameInput, RegisterPasswordInput))
+                return;
+
             Register(RegisterUsernameInput.text, RegisterPasswordInput.text);
         }
 
         public async void Login(string username, string password)
         {
-            await AuthenticationService.Instance
-                .SignInWithUsernamePasswordAsync(username, password);
+            try
+            {
+                await AuthenticationService.Instance
+                    .SignInWithUsernamePasswordAsync(username, password);
 
-            Debug.Log("LOGIN SUCCESS");
+                await CloudSaveManager.Instance.LoadPlayerData();
 
-            await CloudSaveManager.Instance.LoadPlayerData();
-
-          
-            //CloudSaveManager.Instance.PlayerData.coin += 100;
-            //await CloudSaveManager.Instance.SavePlayerData();
-            //Debug.Log("Add coin + Save");
+                OnAuthSuccess?.Invoke();   // 👈 ยิงสัญญาณ
+            }
+            catch (Exception e)
+            {
+                OnAuthFailed?.Invoke(e.Message);
+            }
         }
 
         public async void Register(string username, string password)
@@ -75,22 +81,33 @@ namespace BattleArena.Core
                 await AuthenticationService.Instance
                     .SignUpWithUsernamePasswordAsync(username, password);
 
-                Debug.Log("REGISTER SUCCESS");
-
-                // ===== ���ҧ PlayerData �����á =====
                 CloudSaveManager.Instance.CreateNewPlayerData();
-
                 await CloudSaveManager.Instance.SavePlayerData();
-                Debug.Log("Create PlayerData + Save");
+
+                OnAuthSuccess?.Invoke();   // 👈 ยิงสัญญาณ
             }
-            catch (AuthenticationException e)
+            catch (Exception e)
             {
-                Debug.LogError($"Register Failed: {e.Message}");
+                OnAuthFailed?.Invoke(e.Message);
             }
-            catch (RequestFailedException e)
+        }
+
+        bool ValidateInput(TMP_InputField username, TMP_InputField password)
+        {
+            if (string.IsNullOrEmpty(username.text) ||
+                string.IsNullOrEmpty(password.text))
             {
-                Debug.LogError($"Register Failed: {e.Message}");
+                OnAuthFailed?.Invoke("Username หรือ Password ว่าง");
+                return false;
             }
+
+            if (password.text.Length < 6)
+            {
+                OnAuthFailed?.Invoke("Password ต้องอย่างน้อย 6 ตัว");
+                return false;
+            }
+
+            return true;
         }
     }
 }
