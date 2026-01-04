@@ -83,5 +83,14 @@ namespace BattleArena.Core
             await CloudSaveService.Instance.Data.Player.SaveAsync(data);
             Debug.Log("PlayerData Saved (JSON Object)");
         }
+
+        public void CreateNewPlayerData()
+        {
+            PlayerData = new PlayerData
+            {
+                coin = 0,
+                level = 1,
+            };
+        }
     }
 }
