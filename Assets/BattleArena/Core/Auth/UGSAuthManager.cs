@@ -35,24 +35,17 @@ namespace BattleArena.Core
 
         public async void Login(string username, string password)
         {
-            try
-            {
-                await AuthenticationService.Instance
-                    .SignInWithUsernamePasswordAsync(username, password);
+            await AuthenticationService.Instance
+                .SignInWithUsernamePasswordAsync(username, password);
 
-                Debug.Log("LOGIN SUCCESS");
-                Debug.Log("PlayerId : " + AuthenticationService.Instance.PlayerId);
+            Debug.Log("LOGIN SUCCESS");
 
-                await CloudSaveManager.Instance.LoadPlayerData();
-            }
-            catch (AuthenticationException e)
-            {
-                Debug.LogError("LOGIN ERROR : " + e.Message);
-            }
-            catch (RequestFailedException e)
-            {
-                Debug.LogError("LOGIN REQUEST ERROR : " + e.Message);
-            }
+            await CloudSaveManager.Instance.LoadPlayerData();
+
+          
+            CloudSaveManager.Instance.PlayerData.coin += 100;
+            await CloudSaveManager.Instance.SavePlayerData();
+            Debug.Log("Add coin + Save");
         }
     }
 }
