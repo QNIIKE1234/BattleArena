@@ -63,9 +63,9 @@ namespace BattleArena.Core
             await CloudSaveManager.Instance.LoadPlayerData();
 
           
-            CloudSaveManager.Instance.PlayerData.coin += 100;
-            await CloudSaveManager.Instance.SavePlayerData();
-            Debug.Log("Add coin + Save");
+            //CloudSaveManager.Instance.PlayerData.coin += 100;
+            //await CloudSaveManager.Instance.SavePlayerData();
+            //Debug.Log("Add coin + Save");
         }
 
         public async void Register(string username, string password)
