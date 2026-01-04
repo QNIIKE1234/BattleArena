@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 386bfc707c9b58747a7a3bfaaed71624
+guid: 99b1b2cc29ff8194b9dba0704b6a72f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -676024847018631198
-    second: Item-Bar_0
+      213: -7313197326588185026
+    second: CheckBox-export 4-expo111drt 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item-Bar_0
+      name: CheckBox-export 4-expo111drt 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 460
-        height: 319
+        width: 77
+        height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 14, z: 14, w: 12}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2efdd1ebbf64e96f0800000000000000
-      internalID: -676024847018631198
+      spriteID: e36ff5847cd428a90800000000000000
+      internalID: -7313197326588185026
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59934c77552896f499f54ebdc69cf987
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item-Bar_0: -676024847018631198
+      CheckBox-export 4-expo111drt 2_0: -7313197326588185026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

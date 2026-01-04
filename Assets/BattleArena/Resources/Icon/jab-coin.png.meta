@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 58c187529fbca3c47b3d52bd98ca4387
+guid: e7b7ce4895f5b994a977f730ac73f676
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5027008753681652872
-    second: Add-Button_0
+      213: -2621354726305964876
+    second: jab-coin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Add-Button_0
+      name: jab-coin_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 39
-        height: 39
+        width: 74
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 873a60a3c2a7c3ab0800000000000000
-      internalID: -5027008753681652872
+      spriteID: 4bcdd34d3c31f9bd0800000000000000
+      internalID: -2621354726305964876
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Add-Button_0: -5027008753681652872
+      jab-coin_0: -2621354726305964876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
