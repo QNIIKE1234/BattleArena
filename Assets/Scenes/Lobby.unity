@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &202244555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2621354726305964876, guid: e7b7ce4895f5b994a977f730ac73f676, type: 3}
+  m_Sprite: {fileID: 8919348601043388472, guid: a590c6e55bcb91544954a057629c73a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2979,6 +2979,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1619709713}
     m_Modifications:
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 472255903129622607, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589595098174246552, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842765692359657095, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aba317fba71cd5e4f9fad1ffe1816a5a, type: 3}
+    - target: {fileID: 2377452997491101852, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 712035800519618848, guid: 19938489add420f469c762b5d2cc460f, type: 3}
+    - target: {fileID: 3597781935031491652, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132597484883189907, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1801496486300285329, guid: b43f85f352dd09c488e56390a8ae3fa0, type: 3}
+    - target: {fileID: 5138270097410087724, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138270097410087724, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138270097410087724, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138270097410087724, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138270097410087724, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670307937408326286, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Size.x
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670307937408326286, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Size.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670307937408326286, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3075033957339927718, guid: 289232f1cab72594282136af6d2b5831, type: 3}
+    - target: {fileID: 5670307937408326286, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984401006739607721, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7749295197341713776, guid: fb82d41e5f8f14b4991104d520cfdc13, type: 3}
     - target: {fileID: 7139529737895291844, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
       propertyPath: m_Name
       value: Character
@@ -2986,6 +3070,10 @@ PrefabInstance:
     - target: {fileID: 7139529737895291844, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904885894478779161, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8059222212607996880, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
       propertyPath: m_Pivot.x
@@ -3067,6 +3155,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8510291202399227365, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510291202399227365, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510291202399227365, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510291202399227365, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510291202399227365, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697892909323877730, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7032594937255523117, guid: d2364521a6323df4cae663b7985e0ba4, type: 3}
+    - target: {fileID: 8808430177939423972, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959999061814373252, guid: 025c0bcc8dffd38429975ae5d1300f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2761010819332418464, guid: 776aa4ab46025984083c72c28b0e212b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5672,7 +5792,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1188940550
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7164,7 +7284,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1572810562
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7704,7 +7824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6562288354921452420, guid: 5263df3b3418a3141afdcc5c4303f463, type: 3}
+  m_Sprite: {fileID: -1656926904640794152, guid: a590c6e55bcb91544954a057629c73a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8631,7 +8751,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1908139459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8918,7 +9038,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1938051437
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8993,7 +9113,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.8
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1972527707
 CanvasRenderer:
   m_ObjectHideFlags: 0
